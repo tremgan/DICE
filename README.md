@@ -4,3 +4,13 @@ this is the best team, the best project
 
 ### Structure from Oxford
 Link: https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=Cetuximab
+
+
+# Sequence structure
+Heavy Chain
+QVQLKQSGPGLVQPSQSLSITCTVSGFSLTNYGVHWVRQSPGKGLEWLGVIWSGGNTDYNTPFTSRLSINKDNSKSQVFFKMNSLQSNDTAIYYCAR**ALTYYDYEFAY**WGQGTLVTVSA
+
+Light Chain
+DILLTQSPVILSVSPGERVSFSCRASQSIGTNIHWYQQRTNGSPRLLIKYASESISGIPSRFSGSGSGTDFTLSINSVESEDIADYYC**QQNNNWPTT**FGAGTKLELK
+(CDR3 regions in bold)
+
