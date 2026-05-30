@@ -93,7 +93,6 @@ for variant in variant_pool:
     # --use_msa_server is omitted here because 'msa: empty' is explicitly requested
     cmd = [
         "boltz", "predict", yaml_path,
-        "--out_dir", variant_out_dir,
         "--recycling_steps", "1",  # CRITICAL: Drops recycling iterations from 3 to 1 for Mac optimization
         "--num_workers", "1",
         '--use_msa_server'       
