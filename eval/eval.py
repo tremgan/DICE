@@ -55,15 +55,13 @@ for variant in variant_pool:
             {
                 "protein": {
                     "id": "A",
-                    "sequence": v_seq,
-                    "msa": "empty"
+                    "sequence": v_seq
                 }
             },
             {
                 "protein": {
                     "id": "B",
-                    "sequence": EGFR_DOMAIN_III_SEQ,
-                    "msa": "empty"
+                    "sequence": EGFR_DOMAIN_III_SEQ
                 }
             }
         ],
@@ -93,9 +91,13 @@ for variant in variant_pool:
     # --use_msa_server is omitted here because 'msa: empty' is explicitly requested
     cmd = [
         "boltz", "predict", yaml_path,
-        "--recycling_steps", "1",  # CRITICAL: Drops recycling iterations from 3 to 1 for Mac optimization
-        "--num_workers", "1",
-        '--use_msa_server'       
+        #"--accelerator", "gpu",        # Force CUDA acceleration
+        #"--devices", "1",              # Pin to the A100 core
+        #"--recycling_steps", "3",      # High accuracy default
+        #"--sampling_steps", "200",     # Full diffusion resolution
+        #"--num_workers", "4",          # Fast data staging workers
+        "--use_msa_server",            # Automatic remote MSA mapping
+        "--override"
     ]
 
     print(f"🛸 Submitting task execution: `{' '.join(cmd)}`")
